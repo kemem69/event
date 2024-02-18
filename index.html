@@ -3,13 +3,22 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FXJSLG80G"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16463478077">
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-8FXJSLG80G');
+    gtag('config', 'AW-16463478077');
+  </script>
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+
+      ttq.load('CN8NNSJC77U0M9VJ4N3G');
+      ttq.page();
+    }(window, document, 'ttq');
   </script>
   <meta charset="utf-8">
   <title>All Time Low in Jakarta 2024</title>
@@ -43,20 +52,22 @@
 
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '405208281989892');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '405208281989892');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=405208281989892&ev=PageView&noscript=1"
-  /></noscript>
+      src="https://www.facebook.com/tr?id=405208281989892&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 </head>
 
@@ -180,9 +191,9 @@
         </div>
 
         <div class="text-center ticket">
-          <button type="button" class="btn" id="buyticket" style="margin: 15px 0;" 
-          ><span style="color: rgb(22,22,22);">Buy
-                Tickets</span></button>
+          <button type="button" class="btn" id="buyticket" style="margin: 15px 0;"><span
+              style="color: rgb(22,22,22);">Buy
+              Tickets</span></button>
           <p>Tickets will be available at</p>
           <p>2 February 2024 at 9 a.m</p>
           <p>(GMT +7 / Jakarta Local Time)</p>
@@ -892,12 +903,23 @@
 
     let openDate = new Date('2024-02-02 09:00:00')
     // Insert date and time into HTML
-    document.getElementById("buyticket").disabled = now<openDate;
+    document.getElementById("buyticket").disabled = now < openDate;
   </script>
   <script type="text/javascript">
-    $('#buyticket').click(function() {
-      fbq('track', 'Purchase', {currency: "IDR", value: 1000000.00});
-      location.href='https://widget.loket.com/widget/yho1uzg57mjhrpj2p';
+    $('#buyticket').click(function () {
+      fbq('track', 'Purchase', { currency: "IDR", value: 1000000.00 });
+      ttq.track('ClickButton', {
+        "value": "Buy Ticket", // number. Value of the order or items sold. Example: 100.
+        "currency": "IDR", // string. The 4217 currency code. Example: "USD".
+        "contents": [
+          {
+            "content_id": "1", // string. ID of the product. Example: "1077218".
+            "content_type": "Ticket", // string. Either product or product_group.
+            "content_name": "AllTimeLowTicket" // string. The name of the page or product. Example: "shirt".
+          }
+        ]
+      })
+      location.href = 'https://widget.loket.com/widget/yho1uzg57mjhrpj2p';
     });
   </script>
 </body>
